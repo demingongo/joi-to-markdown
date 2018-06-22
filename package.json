@@ -2,7 +2,7 @@
   "name": "joi-to-markdown",
   "version": "1.0.1",
   "description": "Convert Joi schemas to markdown tables",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint --cache .",
     "test": "mocha test",
