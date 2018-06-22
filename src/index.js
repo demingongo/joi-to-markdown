@@ -86,8 +86,13 @@ internals.appendRecordsFromSchema = function(rows, schema, key, parent_settings)
     const v = test.arg;
     if (v !== undefined) {
       s += ': ';
-      console.log(s,":",v);
-      s += v.toISOString ? v.toISOString() : v;
+      if(v === null || typeof v == "undefined"){
+        console.log(s,":",v);
+        s += v;
+      }
+      else{
+        s += v.toISOString ? v.toISOString() : v;
+      }
     }
     return `\`${s}\``;
   }).join(', ');
