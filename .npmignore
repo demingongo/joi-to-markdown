@@ -17,7 +17,7 @@ node_modules
 examples
 fixtures
 resources
-src
+#src
 test
 .eslintrc
 .eslintignore
