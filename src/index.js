@@ -84,16 +84,15 @@ internals.appendRecordsFromSchema = function(rows, schema, key, parent_settings)
   row.conforms = row.conforms.map(test => {
     let s = test.name;
     const v = test.arg;
+    
+    // update
     if (v !== undefined) {
-      if(v === null || typeof v == "undefined"){
-        console.log(s,":",v);
-        //s += v;
-      }
-      else{
+      if(!(v === null || typeof v == "undefined")){
         s += ': ';
         s += v.toISOString ? v.toISOString() : v;
       }
     }
+    
     return `\`${s}\``;
   }).join(', ');
 
